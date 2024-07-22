@@ -1,0 +1,1 @@
+trong 1 bảng excel có các cột: ID, Test requirements, Steps, Action, Locator Type, Locator value. Trong đó ID chứa các hàng trong cột Steps
