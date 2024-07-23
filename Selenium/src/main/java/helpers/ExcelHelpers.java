@@ -70,6 +70,7 @@ public class ExcelHelpers {
                 case BOOLEAN:
                     CellData = Boolean.toString(cell.getBooleanCellValue());
                     break;
+
                 case BLANK:
                     CellData = "";
                     break;

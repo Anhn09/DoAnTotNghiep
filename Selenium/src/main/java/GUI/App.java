@@ -1,5 +1,7 @@
 package GUI;
 
+import helpers.ExcelHelpers;
+import model.Steps;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -12,18 +14,23 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.List;
 
 public class App {
     private JPanel panelMain;
     private JTextField txtFilePath;
     private JButton btnRun;
     private JTable tableTestCase;
+    private ExcelHelpers excelHelpers;
+    private List<Steps> stepsList;
+
 
     public App() {
         btnRun.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String filePath = txtFilePath.getText();
+                excelHelpers.setExcelFile(filePath,"Sheet1");
 
             }
         });
